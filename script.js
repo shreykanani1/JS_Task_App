@@ -193,22 +193,27 @@ function ProfileFillDetails(){
     console.log("hello")
     let addBtn = document.getElementById("addBtn");
     let addTxt1 = document.getElementById("addTxt").value;
+    
   
-    let currentTime = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()} at ${d.getHours()}:${d.getMinutes()}`;
-    let addTxt = {"notedata":addTxt1,"time":currentTime};
-    console.log(addTxt)
 
-    document.getElementById("addTxt").value = "";
-    let data = JSON.parse(localStorage.getItem("data"));
-    let userEmail= localStorage.getItem("activeAccount");
-    for (let i = 0; i < data.length; i++) {
-      if (data[i].email == userEmail) {
-        data[i].todos.push(addTxt);
-        break;
+    if(addTxt1 != ""){
+      let currentTime = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()} at ${d.getHours()}:${d.getMinutes()}`;
+      let addTxt = {"notedata":addTxt1,"time":currentTime};
+      console.log(addTxt)
+
+      document.getElementById("addTxt").value = "";
+      let data = JSON.parse(localStorage.getItem("data"));
+      let userEmail= localStorage.getItem("activeAccount");
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].email == userEmail) {
+          data[i].todos.push(addTxt);
+          break;
+        }
       }
+      //   console.log(data);
+      localStorage.setItem('data', JSON.stringify(data));
     }
-    //   console.log(data);
-    localStorage.setItem('data', JSON.stringify(data));
+    
     showNotes();
   }
 
