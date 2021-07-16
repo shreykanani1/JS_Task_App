@@ -373,7 +373,7 @@ navigator.geolocation.getCurrentPosition(showPosition);
 function showPosition(position) {
   // x.innerHTML = "Latitude: " + position.coords.latitude +
   // "<br>Longitude: " + position.coords.longitude;
-  fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=bc12083e70d2d22298c2df1cec7101d9`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=bc12083e70d2d22298c2df1cec7101d9`)
   .then(response => response.text())
   .then(data => {
   let a = JSON.parse(data);
