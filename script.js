@@ -112,7 +112,7 @@ function logout(){
   window.location.href = "index.html";
 }
 
-function editProfileFillDetails(){
+function ProfileFillDetails(){
     let user = localStorage.getItem("activeAccount");
     // console.log(user);
     let allUser = JSON.parse(localStorage.getItem("data"));
@@ -327,8 +327,8 @@ function editProfileFillDetails(){
 
 function getData(){
 const gifsBox1 = document.querySelector("#gif1");
-const gifsBox2 = document.querySelector("#gif2");
-const gifsBox3 = document.querySelector("#gif3");
+// const gifsBox2 = document.querySelector("#gif2");
+// const gifsBox3 = document.querySelector("#gif3");
 
 fetch("https://api.giphy.com/v1/gifs/random?api_key=80bfcbf357864cd18518c324f47a7098")
   .then(response => response.text())
@@ -337,23 +337,26 @@ fetch("https://api.giphy.com/v1/gifs/random?api_key=80bfcbf357864cd18518c324f47a
   let a = JSON.parse(data);
   gifsBox1.src = a.data.images.downsized.url;
 });
-fetch("https://api.giphy.com/v1/gifs/random?api_key=80bfcbf357864cd18518c324f47a7098")
-  .then(response => response.text())
-  .then(data => {
+// fetch("https://api.giphy.com/v1/gifs/random?api_key=80bfcbf357864cd18518c324f47a7098")
+//   .then(response => response.text())
+//   .then(data => {
 
-  let a = JSON.parse(data);
-  gifsBox2.src = a.data.images.downsized.url;
-});
-fetch("https://api.giphy.com/v1/gifs/random?api_key=80bfcbf357864cd18518c324f47a7098")
-  .then(response => response.text())
-  .then(data => {
+//   let a = JSON.parse(data);
+//   gifsBox2.src = a.data.images.downsized.url;
+// });
+// fetch("https://api.giphy.com/v1/gifs/random?api_key=80bfcbf357864cd18518c324f47a7098")
+//   .then(response => response.text())
+//   .then(data => {
 
-  let a = JSON.parse(data);
-  gifsBox3.src = a.data.images.downsized.url;
-});
+//   let a = JSON.parse(data);
+//   gifsBox3.src = a.data.images.downsized.url;
+// });
 }
 getData();
-
+function a() {
+  setInterval(()=>{getData()},5000);
+}
+a();
 
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
