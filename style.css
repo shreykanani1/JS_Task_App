@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background-color: #ffffff;
+  padding: 0px 10px;
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  margin:0;
+  padding: 0;
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(1, 96, 160);
+  height:50px;
+}
+.navbar-links ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar-links li,a{
+  text-decoration: none;
+  padding: 0 10px;
+  color: white;
+  display: block;
+  transition: color .5s;
+}
+
+.navbar-links a:hover{
+  display: inline-block;
+  color: rgb(253, 194, 0);
+  /* color: rgb(255, 255, 255); */
+  transition: color .5s;
+  /* border: 10px solid #777777;
+  transition: border .5s;
+  margin: auto 0;
+  height: 50px; */
+}
+
+.logo{
+  font-size: 32px;
+  font-weight: bold;
+  color:white;
+  padding-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+      display: none;
+      width: 100%;
+      background-color: rgb(78, 78, 78);
+  }
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+      display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+  
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  margin: 50px auto;
+  background-color: rgb(216, 216, 216);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.225);
+  
+}
+.container-main{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.225);
+}
+.left-sidebar{
+  min-width: 20%;
+  max-width: 20%;
+  height: fit-content;
+  background-color:rgb(209, 209, 209);
+  border-radius: 20px;
+  color: #666666;
+  /* border:1px solid red; */
+}
+.main{
+  min-width: 60%;
+  max-width: 60%;
+  background-color: rgb(109, 109, 109);
+  border-radius: 20px;
+  /* border:1px solid red; */
+}
+.right-sidebar{
+  /* min-width: 20%;
+  max-width: 20%; */
+  background-color: rgb(209, 209, 209);
+  border-radius: 20px;
+  color: #666666;
+  /* border:1px solid red; */
+}
+.right-sidebar p{
+  padding: 20px 0 0 20px;
+}
+
+.container .title{
+  font-family: Geneva, Tahoma, sans-serif;
+  color: rgb(1, 96, 160);
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.container .input_field{
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.container .input_field label{
+  width: 200px;
+}
+
+.container .input_field input{
+  width:100%;
+  outline-color: rgb(209, 209, 209);
+  border-radius: 3px;
+  border: 1px solid #d5dbd9;
+  padding: 5px;
+}
+
+.container .input_field select{
+  width: 100%;
+  padding: 5px;
+}
+
+.container .input_field .btn{
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  background-color: rgb(1, 96, 160);
+  color:white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.container .input_field .btn:hover{
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  background-color: rgb(10, 57, 88);
+  color:white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+
+
+
+.note-card{
+  max-width: 75%;
+  /* width: 100%; */
+  background-color: rgb(216, 216, 216);
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.225);
+  border-radius: 10px;
+}
+
+.note-card textarea{
+  max-width: 100%;
+  
+}
+
+.note-card .btn{
+  max-width: 100%;
+  padding: 10px;
+  border: 0;
+  background-color: rgb(1, 96, 160);
+  color:white;
+  border-radius: 3px;
+  cursor: pointer;
+  
+}
+
+textarea{
+  resize: none;
+}
+
+.note-card .card-title{
+  font-family: Geneva, Tahoma, sans-serif;
+  color: rgb(110, 110, 110);
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Note ${index + 1}</h5>
+        <p>${element["time"]}</p>
+        <textarea rows="5" cols="25" class="card-text" id="${index}Note"> ${element["notedata"]}</textarea><br>
+        <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger">Delete Note</button>
+        <button class="btn btn-primary" id="${index}" onclick="editNote(this.id)">Edit Note</button>
+    </div>
+</div> */
+
+.noteCard{
+  min-width: 75%;
+  
+  /* background-color: hotpink; */
+  margin: 20px;
+  padding: 30px;
+  /* box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.225); */
+  background-color: rgb(216, 216, 216);
+  border-radius: 5px;
+  float: left;
+  transition: opacity 1s;
+}
+
+.noteCard textarea{
+  min-width: 100%;
+}
+.fade{
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.btn{
+  display: inline-block;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  border:0;
+  margin: 0 10px 0 0;
+}
+.btn-danger{
+  background-color: rgb(255, 46, 46);
+  cursor: pointer;
+  transition: background-color .5s;
+}
+.btn-danger:hover{
+  background-color: rgb(155, 31, 31);
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.btn-primary{
+  background-color: rgb(27, 126, 255);
+  /* border-radius: 50px; */
+  cursor: pointer;
+  transition: background-color .5s;
+}
+.btn-primary:hover{
+  background-color: rgb(21, 75, 146);
+  /* border-radius: 50px; */
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.btn-success{
+  background-color: rgb(0, 194, 0);
+  cursor: pointer;
+  transition: background-color .5s;
+}
+.btn-success:hover{
+  background-color: rgb(7, 117, 7);
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.card-title{
+  font-size: 20px;
+  color: rgb(1, 96, 160);
+  float: left;
+  margin-bottom: 10px;
+}
+.time{
+  color: #777777;
+  font-size: 12px;
+  float: right;
+  margin-right: 5%;
+  margin-top: 7px;
+  float: right;
+}
+#current-time{
+  color: #777777;
+  font-weight: 700;
+}
+
+.card-text{
+  border-radius: 10px;
+  border-color: rgb(211, 211, 211);
+  margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 950px) {
+  #current-time{
+    position: absolute;
+    top: 150px;
+    right: 0px;
+  }
+  .container-main {
+    margin-top: 150px;
+    flex-direction: column;
+  }
+  .left-sidebar{
+    max-width:90%;
+    margin: 0 auto;
+    border-color: #d5dbd9;
+    height: fit-content;
+    order:1;
+  }
+  .main{
+    max-width: 90%;
+    margin: 0 auto;
+    height: fit-content;
+    order:3;
+  }
+  .note-card{
+    width:80%;
+  }
+  .note-card textarea{
+    max-width: 100%;
+  }
+
+  .noteCard{
+    max-width:80%
+  }
+  .right-sidebar{
+    max-width: 90%;
+    height: 50%;
+    order:2;
+  }
+}

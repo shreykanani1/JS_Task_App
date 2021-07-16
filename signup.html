@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" style="box-shadow: 10px 10px 8px #888888;border-radius: 20px;">
+    <div class="title">
+      Registration Form
+    </div>
+      <div class="form">
+        <div class="input_field">
+          <label for="fullname">Name</label>
+          <input type="text" name="fullname" id="fullname" placeholder="Enter name">
+        </div>
+        <div class="input_field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="abc@gmail.com">
+        </div>
+        <div class="input_field">
+          <label for="number">Mobile No.</label>
+          <input type="number" name="number" id="number" placeholder="Enter 10 digit number only">
+        </div>
+        <div class="input_field">
+          <label for="gender">Gender</label>
+          <select name="gender" id="gender">
+            <option value="0">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="input_field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" name="dob" id="dob" >
+        </div>
+        <div class="input_field">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter atleast 8 character with digit">
+        </div>
+        <div class="input_field">
+          <a href="index.html" style="text-decoration: none;margin: 0;padding: 0;"><p style="color: rgb(1, 96, 160);cursor: pointer;">Already have an account?</p></a>
+        </div>
+        <div class="input_field">
+          <input type="submit" value="Submit" onclick="submit()" id="submitbtn" class="btn">
+        </div>
+        <div class="input_field">
+          <p id="err"></p>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
