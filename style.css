@@ -268,6 +268,7 @@ body{
 
 textarea{
   resize: none;
+  max-width: 70%;
 }
 
 .note-card .card-title{
@@ -308,7 +309,9 @@ textarea{
 }
 .fade{
   opacity: 0.5;
+  background-color: rgb(101, 255, 81);
   transition: opacity 1s;
+  transition: background-color 1s;
 }
 
 .btn{
@@ -412,7 +415,7 @@ textarea{
   }
 
   .noteCard{
-    max-width:80%
+    max-width:70%;
   }
   .right-sidebar{
     max-width: 90%;
